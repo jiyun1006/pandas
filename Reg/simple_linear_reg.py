@@ -121,4 +121,4 @@ ax1 = sns.distplot(y, hist=False, label='y')
 ax2 = sns.distplot(y_hat, hist=False, label='y_hat', ax=ax1)
 plt.show()
 plt.close()
-# 결과를 보면 예측값과 실제값의 편향된 위치가 다르다. 따라서 오차를 더 줄일 필요가 있다.
+# 결과를 보면 예측값과 실제값의 편향이 심하다. 따라서 오차를 더 줄일 필요가 있다.
