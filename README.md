@@ -21,4 +21,11 @@ df['horsepower'] = df['horsepower'].astype('float')
 
 #### 선택한 열들의 선형관계를 파악한다.   
 
-.........
+#### 여러 plot 유형 중 알맞은 것을 사용한다.
+```
+# 변수들간의 모든 관계
+grid_ndf = sns.pairplot(ndf)
+plt.show()
+plt.close()
+```   
+
