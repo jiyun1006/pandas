@@ -27,5 +27,33 @@ df['horsepower'] = df['horsepower'].astype('float')
 grid_ndf = sns.pairplot(ndf)
 plt.show()
 plt.close()
+```  
+<img src="https://user-images.githubusercontent.com/52434993/88068197-d6fcec00-cbaa-11ea-9ba1-03adca6922da.png" width="50%"></img>   
+
+- [STEP4] 훈련/검증 데이터 분할   
+#### 데이터셋을 구분한다. (훈련용 / 검증용 - 7 : 3)   
+
+```
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=10)
+
 ```   
+
+- [STEP5] 모형 학습 및 검증   
+#### 결정계수를 구하고 회귀식을 구한다.   
+
+#### 실제 데이터와 예측값을 비교한다.   
+
+```
+y_hat = lr.predict(X) # 예측값
+
+plt.figure(figsize=(10, 5))
+ax1 = sns.distplot(y, hist=False, label='y')
+ax2 = sns.distplot(y_hat, hist=False, label='y_hat', ax=ax1)
+```   
+
+
+
+
 
