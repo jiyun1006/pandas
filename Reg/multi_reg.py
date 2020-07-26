@@ -36,7 +36,6 @@ print('X 변수의 계수 a : ', lr.coef_)
 print('\n')
 
 print('상수항 b : ', lr.intercept_)
-print('\n')
 
 y_hat = lr.predict(X_test)
 
